@@ -1,0 +1,23 @@
+###############################################################################
+# Set default behavior to:
+#   automatically normalize line endings on check-in
+###############################################################################
+*           text=auto
+
+###############################################################################
+# Set file behavior to:
+#   treat as text
+###############################################################################
+*.cs        text diff=csharp
+*.csproj    text
+*.json      text
+*.md        text
+*.props     text
+*.sln       text
+
+###############################################################################
+# Set file behavior to:
+#   treat as text
+#   normalize to Windows-style line endings on check-in
+###############################################################################
+*.sln        text       eol=crlf
