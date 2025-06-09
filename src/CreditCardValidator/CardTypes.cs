@@ -5,5 +5,10 @@ public enum CardTypes
     Unknown = 0,
     Visa,
     Mastercard,
-    AmericaExpress,
+    AmericanExpress,
+    DinersClub,
+    Discover,
+    Jcb,
+    Elo,
+    Hipercard
 }

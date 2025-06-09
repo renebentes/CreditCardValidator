@@ -21,9 +21,14 @@
 
 Este é um aplicativo de console simples desenvolvido com .NET 9 que valida números de cartões de crédito e identifica suas bandeiras. O aplicativo suporta as seguintes bandeiras de cartão:
 
-- Visa
-- Mastercard
 - American Express (Amex)
+- DinersClub
+- Discover
+- Elo
+- Hipercard
+- JCB
+- Mastercard
+- Visa
 
 > [!WARNING] **Limitação:** Atualmente, apenas essas bandeiras são suportadas.
 
@@ -66,9 +71,14 @@ Este é um aplicativo de console simples desenvolvido com .NET 9 que valida núm
 > [!NOTE]
 > Estes exemplos são apenas para fins de teste e não representam cartões reais.
 
-- Visa: `4111 1111 1111 1111`
+- AmericanExpress: `3782 8224 6310 005`
+- DinersClub: `3002 6311 7301 20`
+- Discover: `6221 2687 5844 4692`
+- Elo: `5090 4897 3358 7633`
+- Hipercard: `6062 8217 8583 4814`
+- JCB: `3589 7195 6365 1155`
 - Mastercard: `5500 0000 0000 0004`
-- Amex: `3782 8224 6310 005`
+- Visa: `4111 1111 1111 1111`
 
 ## Autor
 
