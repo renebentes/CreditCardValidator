@@ -6,16 +6,16 @@ namespace CreditCardValidator;
 
 public sealed partial record Card
 {
-    private static readonly ReadOnlyDictionary<CardTypes, Regex> Patterns = new Dictionary<CardTypes, Regex>(
+    private static readonly ReadOnlyDictionary<CardType, Regex> Patterns = new Dictionary<CardType, Regex>(
     [
-        new KeyValuePair<CardTypes, Regex>(CardTypes.AmericanExpress, AmericanExpressPattern()),
-        new KeyValuePair<CardTypes, Regex>(CardTypes.DinersClub, DinersClubPattern()),
-        new KeyValuePair<CardTypes, Regex>(CardTypes.Discover, DiscoverPattern()),
-        new KeyValuePair<CardTypes, Regex>(CardTypes.Elo, EloPattern()),
-        new KeyValuePair<CardTypes, Regex>(CardTypes.Hipercard, HipercardPattern()),
-        new KeyValuePair<CardTypes, Regex>(CardTypes.Jcb, JcbPattern()),
-        new KeyValuePair<CardTypes, Regex>(CardTypes.Mastercard,MasterCardPattern()),
-        new KeyValuePair<CardTypes, Regex>(CardTypes.Visa, VisaPattern())
+        new KeyValuePair<CardType, Regex>(CardType.AmericanExpress, AmericanExpressPattern()),
+        new KeyValuePair<CardType, Regex>(CardType.DinersClub, DinersClubPattern()),
+        new KeyValuePair<CardType, Regex>(CardType.Discover, DiscoverPattern()),
+        new KeyValuePair<CardType, Regex>(CardType.Elo, EloPattern()),
+        new KeyValuePair<CardType, Regex>(CardType.Hipercard, HipercardPattern()),
+        new KeyValuePair<CardType, Regex>(CardType.Jcb, JcbPattern()),
+        new KeyValuePair<CardType, Regex>(CardType.Mastercard,MasterCardPattern()),
+        new KeyValuePair<CardType, Regex>(CardType.Visa, VisaPattern())
     ]).AsReadOnly();
 
     private Card(string number)
@@ -25,7 +25,7 @@ public sealed partial record Card
 
     public bool IsValid { get; private set; }
 
-    public CardTypes GetCardType()
+    public CardType GetCardType()
         => Patterns.SingleOrDefault(pattern => pattern.Value.IsMatch(Number)).Key;
 
     public static Card TryCreate(string number, out string error)

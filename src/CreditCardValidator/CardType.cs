@@ -1,6 +1,6 @@
 namespace CreditCardValidator;
 
-public enum CardTypes
+public enum CardType
 {
     Unknown = 0,
     Visa,

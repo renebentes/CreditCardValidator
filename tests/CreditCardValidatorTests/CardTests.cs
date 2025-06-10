@@ -12,7 +12,7 @@ public class CardTests
         var number = "670958585610242150";
         var card = Card.TryCreate(number, out var error);
         Assert.True(card.IsValid);
-        Assert.Equal(CardTypes.Unknown, card.GetCardType());
+        Assert.Equal(CardType.Unknown, card.GetCardType());
     }
 
     [Theory]
@@ -25,7 +25,7 @@ public class CardTests
         var card = Card.TryCreate(number, out var error);
 
         Assert.True(card.IsValid);
-        Assert.Equal(CardTypes.AmericanExpress, card.GetCardType());
+        Assert.Equal(CardType.AmericanExpress, card.GetCardType());
         Assert.Empty(error);
     }
 
@@ -39,7 +39,7 @@ public class CardTests
         var card = Card.TryCreate(number, out var error);
 
         Assert.True(card.IsValid);
-        Assert.Equal(CardTypes.DinersClub, card.GetCardType());
+        Assert.Equal(CardType.DinersClub, card.GetCardType());
         Assert.Empty(error);
     }
 
@@ -53,7 +53,7 @@ public class CardTests
         var card = Card.TryCreate(number, out var error);
 
         Assert.True(card.IsValid);
-        Assert.Equal(CardTypes.Discover, card.GetCardType());
+        Assert.Equal(CardType.Discover, card.GetCardType());
         Assert.Empty(error);
     }
 
@@ -66,7 +66,7 @@ public class CardTests
         var card = Card.TryCreate(number, out var error);
 
         Assert.True(card.IsValid);
-        Assert.Equal(CardTypes.Elo, card.GetCardType());
+        Assert.Equal(CardType.Elo, card.GetCardType());
         Assert.Empty(error);
     }
 
@@ -80,7 +80,7 @@ public class CardTests
         var card = Card.TryCreate(number, out var error);
 
         Assert.True(card.IsValid);
-        Assert.Equal(CardTypes.Hipercard, card.GetCardType());
+        Assert.Equal(CardType.Hipercard, card.GetCardType());
         Assert.Empty(error);
     }
 
@@ -94,7 +94,7 @@ public class CardTests
         var card = Card.TryCreate(number, out var error);
 
         Assert.True(card.IsValid);
-        Assert.Equal(CardTypes.Jcb, card.GetCardType());
+        Assert.Equal(CardType.Jcb, card.GetCardType());
         Assert.Empty(error);
     }
 
@@ -111,7 +111,7 @@ public class CardTests
         var card = Card.TryCreate(number, out var error);
 
         Assert.True(card.IsValid);
-        Assert.Equal(CardTypes.Mastercard, card.GetCardType());
+        Assert.Equal(CardType.Mastercard, card.GetCardType());
         Assert.Empty(error);
     }
 
@@ -125,7 +125,7 @@ public class CardTests
         var card = Card.TryCreate(number, out var error);
 
         Assert.True(card.IsValid);
-        Assert.Equal(CardTypes.Visa, card.GetCardType());
+        Assert.Equal(CardType.Visa, card.GetCardType());
         Assert.Empty(error);
     }
 
